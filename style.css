@@ -1,0 +1,146 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(114,19,234,1) 0%, rgba(30,73,226,1) 100%);
+    background-image: url("NY_BG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#logo {
+    width: 10%;
+    height: 10%;
+}
+.container {
+    margin-top: 150px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.header-h1 {
+    color: transparent;
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+textarea {
+    overflow: scroll;
+    resize: none;
+    margin-bottom: 10px;
+}
+#shuffle{
+    display: block;
+    width: 100%;
+}
+.shuffle-area{
+    box-sizing: border-box;
+}
+.form-check-input{
+    margin-left: 5px;
+}
+.form-check-label{
+    margin-left: 25px;
+}
+.col-md-6 ul li strong span{
+   font-size: 20px;
+}
+.display{
+    padding: 30px;
+} 
+input[type=checkbox] {
+    filter: hue-rotate(240deg) ;
+    cursor: pointer;
+  }
+.input-ready{
+    margin-top: 20px;
+}
+.btn {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(90deg, rgba(114,19,234,1) 0%, rgba(30,73,226,1) 100%);
+    background-size: 400%;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(114,19,234,1) 0%, rgba(30,73,226,1) 100%);
+    background-size: 400%;
+    border-radius: 50px;
+    opacity: 0;
+    transition: .5s;
+}
+.btn:hover {
+    animation: animate 10s linear infinite;
+}
+.btn:hover::before {
+    filter: blur(25px);
+    opacity: .8;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+}
+#reset {
+    float: right;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
+    background-size: 400%;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+#reset::before {
+    content: '';
+    float: right;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #EC37D0, #D92B2B, #FFAA0D, #EC37D0);
+    background-size: 400%;
+    border-radius: 50px;
+    opacity: 0;
+    transition: .5s;
+}
+#reset:hover {
+    animation: animate 10s linear infinite;
+}
+#reset:hover::before {
+    filter: blur(25px);
+    opacity: .8;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+}
