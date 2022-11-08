@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>Winner Picker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header text-center my-3">
+        <!-- <img id = "logo" src="logo.svg" alt="kpmg-logo">
+        <h1 class=" h1  text-uppercase  display-4 header-h1">KPMGVERSE WINNER 2023</h1>             -->
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="from-group mb-2">
+                    <label for="inp" class="mt-2">PLAYERS</label>
+                    <textarea name="" id="input" class="form-control textarea-autosize" rows="10"
+                        placeholder="Each name should be added separated by comma or new line"></textarea>
+                    <label class="mt-2" for="cars">Choose a number:</label>
+                    <select name="cars" id="numbercheck" class="form-control" onchange="setwinnerlabel();">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    
+                    <button class="btn btn-primary text-uppercase font-weight-bold my-3" id="ready" type="button">
+                        Ready
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="" class="mt-2">CONGRATULATIONS!</label>
+                <div class="card card-body text-center display">
+                    <h2 id="display">Display</h2>
+                </div>
+                <div id="renderwiner">
+                </div>
+                <div class="card p-1 d-block shuffle-area">
+                    <div class="form-group">
+                        <input type="checkbox" class="form-check-input c9" name="" id="checkbox">
+                        <label for="checkbox" class="form-check-label" id="checkbox-label">Remove name after a
+                            Draw</label>
+                        <button class="reset text-uppercase mb-2" id="reset" onclick="resetvalue();">Reset</button>
+                    </div>
+                    <script type="text/javascript">
+                        function setwinnerlabel() {
+                            var myHTML = '';
+                            myHTML += "<ul class='list-group-item my-3'>";
+                            // Get the elements to be iterated
+                            let htmlElements =
+                                document.getElementById("numbercheck");
+
+                            // Use a regular for-loop
+                            for (let i = 0; i < htmlElements.value; i++) {
+                                var setnum = i + 1;
+                                myHTML += "<li class='list-group-item'>";
+                                myHTML += "<strong>";
+                                myHTML += "Winner " + setnum + ": <span id='position" + setnum + "'></span>";
+                                myHTML += "</strong>";
+                                myHTML += "</li>";
+                            }
+                            myHTML += "</ul >";
+
+                            var genne = document.getElementById("renderwiner");
+                            genne.innerHTML = myHTML;
+                        }
+                    </script>
+                    <div class="form-group">
+                        <button class="btn btn-success text-uppercase font-weight-bold my-2"
+                            id="shuffle">Shuffle</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="main.js"></script>
+</body>
+</html>
