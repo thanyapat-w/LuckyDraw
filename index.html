@@ -17,32 +17,6 @@
         <h1 class=" h1  text-uppercase  display-4 header-h1">KPMGVERSE WINNER 2023</h1>             -->
     </header>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="from-group mb-2">
-                    <label for="inp" class="mt-2">PLAYERS</label>
-                    <textarea name="" id="input" class="form-control textarea-autosize" rows="10"
-                        placeholder="Each name should be added separated by comma or new line"></textarea>
-                    <label class="mt-2" for="cars">Choose a number:</label>
-                    <select name="cars" id="numbercheck" class="form-control" onchange="setwinnerlabel();">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    
-                    <button class="btn btn-primary text-uppercase font-weight-bold my-3" id="ready" type="button">
-                        Ready
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-6">
                 <label for="" class="mt-2">CONGRATULATIONS!</label>
                 <div class="card card-body text-center display">
                     <h2 id="display">Display</h2>
@@ -82,9 +56,29 @@
                     <div class="form-group">
                         <button class="btn btn-success text-uppercase font-weight-bold my-2"
                             id="shuffle">Shuffle</button>
-                    </div>                    
+                    </div>
+                    <div class="from-group mb-2">
+                        <label for="inp" class="mt-2">PLAYERS</label>
+                        <textarea name="" id="input" class="form-control textarea-autosize" rows="10"
+                            placeholder="Each name should be added separated by comma or new line"></textarea>
+                        <label class="mt-2" for="cars">Choose a number:</label>
+                        <select name="cars" id="numbercheck" class="form-control" onchange="setwinnerlabel();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button class="btn btn-primary text-uppercase font-weight-bold my-3" id="ready" type="button">
+                            Ready
+                        </button>
+                    </div>                   
                 </div>
-            </div>
         </div>
     </div>    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
