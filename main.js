@@ -6,6 +6,7 @@ const reset = document.getElementById('reset')
 const inputFile = document.getElementById('input-file')
 const checkbox = document.getElementById('checkbox')
 const ready = document.getElementById('ready')
+const numbercheck = document.getElementById('numbercheck')
 
 var Position1 = null;
 var Position2 = null;
@@ -36,7 +37,20 @@ ready.addEventListener('click', function (event) {
 })
 
 var checkclick = 1;
+
 shuffle.addEventListener('click', function (event) {
+    var countNum = 0;
+
+    countNum = parseInt(numbercheck.value);    
+    for (let i = 1; i < countNum; i++) {
+        click_random();
+    }
+
+
+    click_random();
+});
+
+function click_random() {
     for (let i = 0; i < htmlElements.value; i++) {
         var setnum = i + 1;
 
@@ -118,7 +132,7 @@ shuffle.addEventListener('click', function (event) {
                                 console.log(participantNames)
                                 winnerAlert(suffledNames[rand])
                             }
-                            if (Position3 != null && checkclick == 3)
+                        if (Position3 != null && checkclick == 3)
                             if (!Position3.innerHTML) {
                                 Position3.innerHTML = suffledNames[rand]
                                 if (checkbox.checked == true) {
@@ -200,11 +214,11 @@ shuffle.addEventListener('click', function (event) {
                             }
                         checkclick = checkclick + 1;
                     }
-                }, i/80)
+                }, i / 80)
             })(i * 100, i)
         }
     }
-})
+}
 
 inputFile.addEventListener('change', function (event) {
     input.value = ''
