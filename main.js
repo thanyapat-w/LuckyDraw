@@ -249,6 +249,7 @@ function resetvalue() {
     if (Position8 != null) Position8.innerHTML = ''
     if (Position9 != null) Position9.innerHTML = ''
     if (Position10 != null) Position10.innerHTML = ''
+    if (participantNames != null) display.innerHTML = ''
     checkclick = 1;
 }
 
