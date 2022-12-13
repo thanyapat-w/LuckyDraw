@@ -14,8 +14,14 @@ body {
     width: 10%;
     height: 10%;
 }
+.mt-2 {
+    font-size: 20px;
+    color:rgba(30,73,226,1);
+    font-weight: bold;
+}
 .container {
     margin-top: 150px;
+    width: 100%;
     background: #fff;
     border-radius: 5px;
     padding: 10px;
@@ -52,6 +58,7 @@ textarea {
 }
 .display{
     padding: 30px;
+    font-size: 50px;
 } 
 input[type=checkbox] {
     filter: hue-rotate(240deg) ;
