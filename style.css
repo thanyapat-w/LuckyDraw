@@ -26,6 +26,12 @@ body {
     color:rgba(30,73,226,1);
     font-weight: bold;
 }
+
+.mt-3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .container {
     margin-top: 150px;
     width: 100%;
@@ -64,8 +70,7 @@ textarea {
    font-size: 20px;
 }
 .display{
-    padding: 30px;
-    font-size: 50px;
+    padding: 20px;
 } 
 input[type=checkbox] {
     filter: hue-rotate(240deg) ;
