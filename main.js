@@ -249,7 +249,7 @@ function resetvalue() {
     if (Position8 != null) Position8.innerHTML = ''
     if (Position9 != null) Position9.innerHTML = ''
     if (Position10 != null) Position10.innerHTML = ''
-    if (display != null) display.innerHTML = 'Display'
+    if (display != null) display.innerHTML = 'The lucky winner is...'
     checkclick = 1;
 }
 
